@@ -1,0 +1,1 @@
+This is just a demonstration of client and server interaction using flask, javascript, html and css.
