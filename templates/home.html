@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1 class = "background">Javascripts</h1>
+        <p>JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.</p>
+        <p>Javascript is a popular programming language. Javascript features are flexible. Many open-source libraries are available. <p>GitHub contains a large volume of Javascript code by developers across the world.</p> 
+        <p>Javascript works well in the front end and back end.</p>
+        <p>Javascript has a simple syntax. Without any settings, anyone can execute Javascript programs and make them user-friendly.</p> <p> One individual having basic knowledge of HTML, CSS and coding can work with Javascript.</p>
+
+
+
+
+     <h2 class = "background">Features of JavaScript</h2>
+     <ul>
+            <li>Javascript will run in the same way in all systems with any operating system.</li>
+            <li>Javascript executes the client-side script in the browser.</li>
+            <li>The browser interprets JavaScript code.</li>
+            <li>Events are actions. Javascript provides event-handling options.</li>
+            <li>In Javascript, names, variables, keywords, and functions are case-sensitive.</li>
+
+     </ul>
+
+
+
+     <h2 class = "background">Comparison</h2>
+     <P>The description of the pros and cons of the most important Javascript features in the form of a table</P>
+
+     <div class="grid-container">
+        <div class="grid-item  bold">Pros</div>
+        <div class="grid-item bold">Example code</div>
+        <div class="grid-item bold">Source</div>  
+        <div class="grid-item bold">Extra comment</div>
+        <div class="grid-item">JavaScript is easy to understand and learn.</div>
+        <div class="grid-item"><code>var name = 'Goistemodimo'</code></div>  
+        <div class="grid-item"><a href="stackoverflow.com">stackoverflow.com</a></div>
+        <div class="grid-item"><img src="{{ url_for('static', filename='images/pics.png')}}" alt="Javacript code"></img></div>
+
+     </div>
+
+     <div class="grid-container">
+        <div class="grid-item  bold">Cons</div>
+        <div class="grid-item bold">Example code</div>
+        <div class="grid-item bold">Source</div>  
+        <div class="grid-item bold">Extra comment</div>
+        
+        <div class="grid-item">JavaScript only supports single inheritance and not multiple inheritance</div>
+        <div class="grid-item"><code>const parent = {
+            value: 2,
+            method() {
+              return this.value + 1;
+            },
+          };
+          console.log(parent.method());
+          const child = {
+            __proto__: parent,
+          };
+          console.log(child.method());</code></div>  
+        <div class="grid-item"><a href="stackoverflow.com">stackoverflow.com</a></div>
+        <div class="grid-item"><img src="{{ url_for('static', filename='images/pics1.png')}}"><img></div>
+
+     </div>
+
+     <h3 class="background">Conclusion</h3>
+     <p>Description on why the language matches my need</p>
+     <p>Javascript language matches my needs beacuse its a programming langauge of the web. 
+        <p>Javascript plays a major role in frontend development.</p><p> In fact almost every web application was created with javascript. </p>
+        <p>This speaks of the importance of javascript in web development.</p>
+
+     <h3 class="background">Links to learn Javscript</h3>
+     <ul>
+        <li><a href="stackoverflow.com">stackoverflow</li>
+        <li><a href="https://www.w3schools.com/">w3schools</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/">mozilla</a></li>
+        
+    </ul>
+    
+    <h3 class="background">Feedback</h3>
+    <div class="form-container" >
+    <form id="formSubmit" name="formSubmit">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="name" value="Thulani">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" class="email" value="thulani059@gmail.com">
+    
+    
+    <p>Options</p>
+
+    <select name="elements" id="elements" onchange="getJsonData()">
+        <option value="student" selected>Student</option>
+        <option value="bachelor">Bachelor</option>
+    </select>
+
+    <div id="json_data_values">
+        
+    </div>
+
+    <p>Comment<p>
+    <textarea type="text" name="comment" value="comment" id="comment" >Default comment</textarea>
+
+    <button type="submit" name="submit" class="submit">Submit</button>
+
+
+    <ol id="list" style="list-style-type: none;">
+        
+    </ol>
+
+    </form>
+    </div>
+
+
+<script src="{{ url_for('static', filename='javascript.js') }}"></script>
+
+
+
+
+
+    
+</body>
+</html>
