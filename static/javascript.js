@@ -40,7 +40,10 @@ listvalues.appendChild(listedvalues);
 
 function getJsonData() {
     const elements = document.getElementById('elements').value;
-    const json_file = `/api/${elements}/`;
+
+    const studentlinks = 'http://127.0.0.1:5000/api/surveys/'
+    const bachelorLinks = 'http://127.0.0.1:5000/api/questions/'
+    const json_file = (elements === 'student') ? studentlinks : bachelorLinks;
 
 fetch(json_file)
 .then(response => response.json())
