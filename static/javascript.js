@@ -41,18 +41,23 @@ listvalues.appendChild(listedvalues);
 function getJsonData() {
     const elements = document.getElementById('elements').value;
 
-    const studentlinks = 'http://127.0.0.1:5000/api/surveys/'
-    const bachelorLinks = 'http://127.0.0.1:5000/api/questions/'
-    const json_file = (elements === 'student') ? studentlinks : bachelorLinks;
+    const Linked = 'http://127.0.0.1:5000/api/questions/'
 
-fetch(json_file)
+fetch(Linked)
 .then(response => response.json())
 .then(jsonData => {
     
 const json_data_values = document.getElementById('json_data_values');
 json_data_values.innerHTML = ' ';
 
-jsonData.forEach(item => {
+let filterData;
+if (elements === 'student'){
+  filterData = jsonData.slice(-2);
+} else {
+  filterData = jsonData
+}
+
+filterData.forEach(item => {
 
 const divvalues = document.createElement('div');
 const radiovalues = (item.options && item.options.length > 0)
